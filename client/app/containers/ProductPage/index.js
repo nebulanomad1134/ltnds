@@ -19,6 +19,8 @@ import { BagIcon } from '../../components/Common/Icon';
 import ProductReviews from '../../components/Store/ProductReviews';
 import SocialShare from '../../components/Store/SocialShare';
 
+import TryOnButton from '../../components/Store/TryOnButton';
+
 class ProductPage extends React.PureComponent {
   componentDidMount() {
     const slug = this.props.match.params.slug;
@@ -125,6 +127,12 @@ class ProductPage extends React.PureComponent {
                     <div className='my-4 item-share'>
                       <SocialShare product={product} />
                     </div>
+
+                    {/* Conditional Try-On Button */}
+                    {product.brand && product.brand.name === 'StyleHub' && (
+                      <TryOnButton product={product} />
+                    )}
+
                     <div className='item-actions'>
                       {itemInCart ? (
                         <Button
@@ -142,7 +150,8 @@ class ProductPage extends React.PureComponent {
                         <Button
                           variant='primary'
                           disabled={
-                            product.quantity <= 0 && !shopFormErrors['quantity']
+                            product.inventory <= 0 &&
+                            !shopFormErrors['quantity']
                           }
                           text='Add To Bag'
                           className='bag-btn'
@@ -173,14 +182,14 @@ class ProductPage extends React.PureComponent {
 }
 
 const mapStateToProps = state => {
-  const itemInCart = state.cart.cartItems.find(
-    item => item._id === state.product.storeProduct._id
-  )
-    ? true
-    : false;
+  const product = state.product.storeProduct || {}; // Fallback to avoid undefined
+
+  const itemInCart = !!state.cart.cartItems.find(
+    item => item._id === product._id
+  );
 
   return {
-    product: state.product.storeProduct,
+    product,
     productShopData: state.product.productShopData,
     shopFormErrors: state.product.shopFormErrors,
     isLoading: state.product.isLoading,

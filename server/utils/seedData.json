@@ -1,108 +1,24 @@
 {
-    "categories": [
-      { "name": "Electronics", "description": "Devices and gadgets", "isActive": true },
-      { "name": "Home Appliances", "description": "Appliances for your home", "isActive": true },
-      { "name": "Sports & Outdoors", "description": "Gear and equipment for outdoor activities", "isActive": true },
-      { "name": "Fashion", "description": "Clothing and accessories", "isActive": true },
-      { "name": "Books", "description": "Fiction and non-fiction books", "isActive": true }
-    ],
-    "brands": [
-      { "name": "TechGear", "description": "Top-notch tech products", "isActive": true },
-      { "name": "HomeEase", "description": "Comfortable and reliable home products", "isActive": true },
-      { "name": "OutdoorPro", "description": "Gear for adventurous souls", "isActive": true },
-      { "name": "StyleHub", "description": "Trendy and stylish fashion", "isActive": true },
-      { "name": "ReadWell", "description": "Books for all ages", "isActive": true }
-    ],
-    "products": [
+    "categories": [{ "name": "Fashion", "description": "Clothing and accessories", "isActive": true }],
+	"brands": [      { "name": "StyleHub", "description": "Trendy and stylish fashion", "isActive": true }],
+	"products": [
       {
-        "sku": "P001",
-        "name": "Wireless Bluetooth Headphones",
-        "imageUrl": "https://m.media-amazon.com/images/I/616USYFqRkL._AC_UY327_FMwebp_QL65_.jpg",
-        "description": "High-quality wireless headphones with noise cancellation.",
-        "quantity": 50,
-        "price": 99.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Electronics",
-        "brand": "TechGear"
-      },
-      {
-        "sku": "P002",
-        "name": "Smartphone Stand",
-        "imageUrl": "https://m.media-amazon.com/images/I/61srjyM7TFL._AC_UY327_FMwebp_QL65_.jpg",
-        "description": "Adjustable and durable stand for smartphones.",
-        "quantity": 100,
-        "price": 14.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Electronics",
-        "brand": "TechGear"
-      },
-      {
-        "sku": "P003",
-        "name": "Air Fryer",
-        "imageUrl": "https://m.media-amazon.com/images/I/71QwoGmcfUL._AC_UY327_FMwebp_QL65_.jpg",
-        "description": "Crispy and healthy meals made easy.",
-        "quantity": 25,
-        "price": 129.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Home Appliances",
-        "brand": "HomeEase"
-      },
-      {
-        "sku": "P004",
-        "name": "Vacuum Cleaner",
-        "imageUrl": "https://m.media-amazon.com/images/I/61p-lLb7sTL._AC_UY327_FMwebp_QL65_.jpg",
-        "description": "Compact and powerful vacuum cleaner for your home.",
-        "quantity": 30,
-        "price": 199.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Home Appliances",
-        "brand": "HomeEase"
-      },
-      {
-        "sku": "P005",
-        "name": "Trekking Backpack",
-        "imageUrl": "https://m.media-amazon.com/images/I/811myp1aRcL._AC_UL480_FMwebp_QL65_.jpg",
-        "description": "Durable backpack for trekking and travel.",
-        "quantity": 40,
-        "price": 89.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Sports & Outdoors",
-        "brand": "OutdoorPro"
-      },
-      {
-        "sku": "P006",
-        "name": "Fitness Tracker Watch",
-        "imageUrl": "https://m.media-amazon.com/images/I/71CQ6esBqFL._AC_UY327_FMwebp_QL65_.jpg",
-        "description": "Monitor your fitness and health with ease.",
-        "quantity": 60,
-        "price": 59.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Sports & Outdoors",
-        "brand": "OutdoorPro"
-      },
-      {
-        "sku": "P007",
-        "name": "Men's Leather Wallet",
-        "imageUrl": "https://m.media-amazon.com/images/I/717y85RdvML._AC_UL480_FMwebp_QL65_.jpg",
-        "description": "Stylish and durable leather wallet.",
-        "quantity": 100,
-        "price": 29.99,
+        "sku": "P010",
+        "name": "MAGCOMSEN Men's Polo Shirts Short Sleeve",
+        "imageUrl": "https://m.media-amazon.com/images/I/81F-P85M7IL._AC_SX679_.jpg",
+        "description": "style: Classic polo shirts with 3-button placket and spread collar, a loop under the buttons suitable for hanging sunglasses or microphone, dual pen pockets on left sleeve for your convenience.",
+        "quantity": 70,
+        "price": 39.99,
         "taxable": true,
         "isActive": true,
         "category": "Fashion",
         "brand": "StyleHub"
       },
-      {
-        "sku": "P008",
-        "name": "Women's Handbag",
-        "imageUrl": "https://m.media-amazon.com/images/I/71hcpS-OTkL._AC_UL480_FMwebp_QL65_.jpg",
-        "description": "Elegant and spacious handbag for every occasion.",
+	  {
+        "sku": "P011",
+        "name": "Under Armour Men's New Freedom Flag T-Shirt",
+        "imageUrl": "https://m.media-amazon.com/images/I/51H2u5sBL1L._AC_SX679_.jpg",
+        "description": "Everyone makes graphic Ts..but Under Armour makes them better. The fabric we use is light, soft, and quick-drying. Super-soft, cotton-blend fabric provides all-day comfort. Ribbed collar. Loose: Fuller cut for complete comfort. 60% Cotton/40% Polyester..",
         "quantity": 70,
         "price": 49.99,
         "taxable": true,
@@ -110,30 +26,19 @@
         "category": "Fashion",
         "brand": "StyleHub"
       },
-      {
-        "sku": "P009",
-        "name": "Cooking Recipe Book",
-        "imageUrl": "https://m.media-amazon.com/images/I/91qJ9YQmSFL._AC_UL480_FMwebp_QL65_.jpg",
-        "description": "Discover delicious recipes for everyday cooking.",
-        "quantity": 200,
-        "price": 19.99,
+	  {
+        "sku": "P012",
+        "name": "Button Down Regular Fit Long Sleeve Plaid Flannel Casual Shirts",
+        "imageUrl": "https://m.media-amazon.com/images/I/71xpzd0FFUL._AC_SX569_.jpg",
+        "description": "Produced By Soft Cotton Fabric Which Gives Most Comfortable Wear; Ideal match with casual pants;cargo pants;jeans etc.",
+        "quantity": 70,
+        "price": 69.99,
         "taxable": true,
         "isActive": true,
-        "category": "Books",
-        "brand": "ReadWell"
-      },
-      {
-        "sku": "P010",
-        "name": "Children's Storybook",
-        "imageUrl": "https://m.media-amazon.com/images/I/81lYmyWJBcL._AC_UL480_FMwebp_QL65_.jpg",
-        "description": "Fun and engaging stories for kids.",
-        "quantity": 150,
-        "price": 9.99,
-        "taxable": true,
-        "isActive": true,
-        "category": "Books",
-        "brand": "ReadWell"
+        "category": "Fashion",
+        "brand": "StyleHub"
       }
+      
     ]
   }
   
