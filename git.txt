@@ -1,0 +1,11 @@
+git init                              # Initialize a new Git repository
+git add .                             # Stage all files for commit
+git commit -m "Initial commit"         # Commit the staged files
+git remote add origin git@github.com:<your-github-username>/<your-repository-name>.git  # Link remote repository
+git push -u origin main               # Push the changes to GitHub
+
+git add .
+git commit -m “fix style of web 2”
+git push origin main --force
+
+git pull origin main
