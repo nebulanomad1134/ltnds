@@ -1,0 +1,37 @@
+.image-generator-container {
+    margin-bottom: 1rem;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .product-image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .generated-article {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+.generated-article strong {
+    color: #0066cc;
+    font-weight: 600;
+}

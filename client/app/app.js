@@ -4,7 +4,7 @@
  *
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -14,6 +14,9 @@ import { SET_AUTH } from './containers/Authentication/constants';
 import Application from './containers/Application';
 import ScrollToTop from './scrollToTop';
 import setToken from './utils/token';
+
+import { sendInteractionsToBackend } from './utils/interactionTracker';
+import ChatWithAI from './components/Common/ChatWithAI';
 
 // Import application sass styles
 import './styles/style.scss';
@@ -41,16 +44,28 @@ if (token) {
   store.dispatch({ type: SET_AUTH });
 }
 
-const app = () => (
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <SocketProvider>
-        <ScrollToTop>
-          <Application />
-        </ScrollToTop>
-      </SocketProvider>
-    </ConnectedRouter>
-  </Provider>
-);
+const App = () => {
+  // Add periodic interaction sending
+  useEffect(() => {
+    const interval = setInterval(() => {
+      sendInteractionsToBackend(); // Send interactions every 5 minutes
+    }, 5 * 60 * 1000); // Interval in milliseconds
 
-export default app;
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, []);
+
+  return (
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <SocketProvider>
+          <ScrollToTop>
+            <Application />
+            <ChatWithAI />
+          </ScrollToTop>
+        </SocketProvider>
+      </ConnectedRouter>
+    </Provider>
+  );
+};
+
+export default App;

@@ -14,7 +14,7 @@ import Input from '../../Common/Input';
 import Switch from '../../Common/Switch';
 import Button from '../../Common/Button';
 import SelectOption from '../../Common/SelectOption';
-
+import ImageWithGenerate from '../../Common/ImageWithGenerate';
 const taxableSelect = [
   { value: 1, label: 'Yes' },
   { value: 0, label: 'No' }
@@ -114,6 +114,32 @@ const EditProduct = props => {
               }}
             />
           </Col>
+
+          <Col xs='12' className='mb-3'>
+            <label>Current Image</label>
+            {product.imageUrl ? (
+              <ImageWithGenerate
+                imageUrl={product.imageUrl}
+                altText={product.name}
+              />
+            ) : (
+              <p>No image available</p>
+            )}
+          </Col>
+          <Col xs='12'>
+            <Input
+              type={'text'}
+              error={formErrors['imageUrl']}
+              label={'Image URL'}
+              name={'imageUrl'}
+              placeholder={'Enter image URL'}
+              value={product.imageUrl}
+              onInputChange={(name, value) => {
+                productChange(name, value);
+              }}
+            />
+          </Col>
+
           <Col xs='12' lg='6'>
             <Input
               type={'number'}

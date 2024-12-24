@@ -20,6 +20,7 @@ import ProductReviews from '../../components/Store/ProductReviews';
 import SocialShare from '../../components/Store/SocialShare';
 
 import TryOnButton from '../../components/Store/TryOnButton';
+import { trackInteraction } from '../../utils/interactionTracker';
 
 class ProductPage extends React.PureComponent {
   componentDidMount() {
@@ -27,12 +28,22 @@ class ProductPage extends React.PureComponent {
     this.props.fetchStoreProduct(slug);
     this.props.fetchProductReviews(slug);
     document.body.classList.add('product-page');
+
+    const { product } = this.props;
+    if (product && product._id) {
+      trackInteraction(product._id, 'view'); // Track product view
+    }
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.slug !== prevProps.match.params.slug) {
       const slug = this.props.match.params.slug;
       this.props.fetchStoreProduct(slug);
+    }
+
+    const { product } = this.props;
+    if (product && product._id) {
+      trackInteraction(product._id, 'view'); // Track view for the updated product
     }
   }
 

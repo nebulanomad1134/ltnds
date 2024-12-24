@@ -14,6 +14,8 @@ const orderRoutes = require('./order');
 const reviewRoutes = require('./review');
 const wishlistRoutes = require('./wishlist');
 
+const adminRoutes = require('./admin');
+
 // auth routes
 router.use('/auth', authRoutes);
 
@@ -52,5 +54,8 @@ router.use('/review', reviewRoutes);
 
 // Wishlist routes
 router.use('/wishlist', wishlistRoutes);
+
+//click, view
+router.use('/admin', adminRoutes);
 
 module.exports = router;
