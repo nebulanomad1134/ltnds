@@ -37,6 +37,7 @@
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
+    "@gradio/client": "^1.8.0",
     "gradio-client": "^1.0.0",
     "mern-ecommerce": "file:",
     "regenerator-runtime": "^0.14.1"

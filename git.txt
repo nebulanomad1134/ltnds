@@ -5,7 +5,10 @@ git remote add origin git@github.com:<your-github-username>/<your-repository-nam
 git push -u origin main               # Push the changes to GitHub
 
 git add .
-git commit -m “fix style of web 2”
+git commit -m “4 functions”
 git push origin main --force
 
 git pull origin main
+
+
+
